@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link href="http://media.china-sss.com/style/site/g-base.css?vs=2016040801" rel="stylesheet">
+		<style>
+			.img-h{padding-left:120px;background:url(http://media.china-sss.com/springairlines/images/activitiesall/activities467/i-txt-logo.png) center left no-repeat;height:50px;line-height:50px;}
+			.fans{margin:20px 0;padding:3px;background:url(http://media.china-sss.com/springairlines/images/activitiesall/activities467/bg-fans.jpg) no-repeat;height:504px;overflow:hidden;}
+		    .fans li{float:left;width:135px;-webkit-transition:width .5s;-moz-transition:width .5s;transition:width .5s;}
+		    .fans .current{width:454px;}
+
+		</style>
+	</head>
+	<body>
+		<div style="width: 1000px;margin: 100px auto;">
+        <h2 class="img-h">景点推荐</h2>
+        <div class="fans">
+          <ul class="f-cb">
+            <li class="current"><img src="http://media.china-sss.com/springairlines/images/activitiesall/activities467/f1.jpg" alt=""></li>
+            <li><img src="http://media.china-sss.com/springairlines/images/activitiesall/activities467/f2.jpg" alt=""></li>
+            <li><img src="http://media.china-sss.com/springairlines/images/activitiesall/activities467/f3.jpg" alt=""></li>
+            <li><img src="http://media.china-sss.com/springairlines/images/activitiesall/activities467/f4.jpg" alt=""></li>
+            <li><img src="http://media.china-sss.com/springairlines/images/activitiesall/activities467/f5.jpg" alt=""></li>
+          </ul>
+        </div>
+      </div>
+      <script src="http://ajax.china-sss.com/js/sea-master.js?vs=2016061601"></script>
+      <script src="./jquery-2.1.4.min.js"></script>
+      <script>
+    function extend(ori, add) {
+        for (var k in add) {
+            ori[k] = add[k];
+        }
+        return ori
+    }
+    var throttle = function () { //throttle(mouseE,{args:[this]});
+        var isClear = arguments[0], fn;
+        console.log(isClear);
+        if (typeof isClear === 'boolean') {
+            fn = arguments[1];
+            fn.__throttleID && clearTimeout(fn.__throttleID);
+        } else { //
+            fn = isClear;
+            var param = arguments[1];
+            var p = extend({
+                context: null,
+                args: [],
+                time: 200 
+            }, param);
+            arguments.callee(true, fn);
+            fn.__throttleID = setTimeout(function () {
+                fn.apply(p.context, p.args);
+            }, p.time);
+        }
+    };
+
+      	function mouseE(that){
+      		$(that).addClass('current').siblings().removeClass();
+      	}
+      	
+      	 $('.fans').on('mouseenter', 'li', function() {
+      	 	throttle(mouseE,{args:[this]});
+	     });
+
+      </script>
+	</body>
+</html>
