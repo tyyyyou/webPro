@@ -1,0 +1,83 @@
+@charset "utf-8";
+/* 小三角 */
+.small-strangle1 {
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-top: 10px solid green;
+    border-right: 10px solid green;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    margin: 0;
+}
+.small-strangle2 {
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-top: 10px solid green;
+    border-left: 10px solid green;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    margin: 0;
+}
+
+/* 弹框关闭X */
+.circle-w {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    border:1px solid #f30;
+    transform: rotate(45deg);
+    .line-left,
+    .line-right{
+        position: absolute;
+    }
+    .line-left {
+        left: 50%;
+        top: 5%;
+        border-right: 1px solid red;
+        height: 90%;
+    }
+    .line-right {
+        top: 50%;
+        left: 5%;
+        border-top: 1px solid red;
+        width: 90%;
+    }
+}
+
+
+/* 更多more */
+$squareW: 50px;
+$squareH: 50px;
+$borderRatio: .13;
+.square {
+    position: relative;
+    width: $squareW;height: $squareH;
+    background-color: #ff7200;
+    .line-h, .line-v {
+        position: absolute;
+    }
+    .line-h {
+        left: (1-$borderRatio)*100%/2;
+        top: 10%;
+        border-right: $borderRatio*$squareW solid #fff;
+        height: 80%;
+    }
+    .line-v {
+        top: (1-$borderRatio)*100%/2;
+        left: 10%;
+        border-top: $borderRatio*$squareW solid #fff;
+        width: 80%;
+    }
+}
+
+/* 圆形 */
+$circleW: 20px;
+.circle {
+    width: $circleW;
+    height: $circleW;
+    border-radius: $circleW/2;
+    background-color: red;
+}

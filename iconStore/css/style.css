@@ -1,0 +1,22 @@
+@charset "UTF-8";
+/* 小三角 */
+.small-strangle1 { padding: 0; width: 0; height: 0; border-top: 10px solid green; border-right: 10px solid green; border-left: 10px solid transparent; border-bottom: 10px solid transparent; margin: 0; }
+
+.small-strangle2 { padding: 0; width: 0; height: 0; border-top: 10px solid green; border-left: 10px solid green; border-right: 10px solid transparent; border-bottom: 10px solid transparent; margin: 0; }
+
+/* 弹框关闭X */
+.circle-w { position: relative; width: 50px; height: 50px; border-radius: 25px; border: 1px solid #f30; transform: rotate(45deg); }
+.circle-w .line-left, .circle-w .line-right { position: absolute; }
+.circle-w .line-left { left: 50%; top: 5%; border-right: 1px solid red; height: 90%; }
+.circle-w .line-right { top: 50%; left: 5%; border-top: 1px solid red; width: 90%; }
+
+/* 更多more */
+.square { position: relative; width: 50px; height: 50px; background-color: #ff7200; }
+.square .line-h, .square .line-v { position: absolute; }
+.square .line-h { left: 43.5%; top: 10%; border-right: 6.5px solid #fff; height: 80%; }
+.square .line-v { top: 43.5%; left: 10%; border-top: 6.5px solid #fff; width: 80%; }
+
+/* 圆形 */
+.circle { width: 20px; height: 20px; border-radius: 10px; background-color: red; }
+
+/*# sourceMappingURL=style.css.map */
