@@ -1,0 +1,14 @@
+//1、使用.clearfix(航空网、商旅通、绿翼商城中为.f-cb)清除浮动，避免使用多余的容器清除浮动
+//2、f-：功能性类名；i-：icon元素类名
+@charset "utf-8";
+// global use
+$mainFont:"微软雅黑",sans-serif;
+@mixin prefix($name,$value) {
+    -webkit-#{$name}:$value;
+    -moz-#{$name}:$value;
+    -ms-#{$name}:$value;
+    -o-#{$name}:$value;
+    $name:$value;
+}
+
+/*  */
