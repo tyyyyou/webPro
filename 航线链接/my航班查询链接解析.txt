@@ -1,0 +1,3 @@
+http://pages.ch.com/AirFlights/ActivitiesFlightsCMS?OriCityCode=YTY&DestCityCode=HKT&versioncode=544&t=1462759603592&cmpid=edmin_mk_manu_chaojiyushou_160923_hx
+
+登录后不直接跳转秒杀页面，而是跳转为活动页面，是因为需要后台进行配置的。

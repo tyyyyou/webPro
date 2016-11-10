@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/api.css" />
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<div class="area-wrap">
+			<div class="area-title"><span class="title-date">10月22日</span><i class="icon-toggle"></i></div>
+			<div class="area-cont">
+				<p class="cont-line"><span class="">燃油费</span><span class="">40</span></p>
+				<p class="cont-line"><span class="">基建费</span><span class="">50</span></p>
+				<p class="cont-line"><span class="">机器燃料费</span><span class="">1</span></p>
+				<p class="cont-line"><span class="">总计</span><span class="">￥231</span></p>
+			</div>
+		</div>
+		<div class="area-wrap">
+			<div class="area-title"><span class="title-date">10月21日</span><i class="icon-toggle"></i></div>
+			<div class="area-cont">
+				<p class="cont-line"><span class="">燃油费</span><span class="">40</span></p>
+				<p class="cont-line"><span class="">基建费</span><span class="">50</span></p>
+				<p class="cont-line"><span class="">机器燃料费</span><span class="">1</span></p>
+				<p class="cont-line"><span class="">总计</span><span class="">￥231</span></p>
+			</div>
+		</div>
+		<div class="area-wrap">
+			<div class="area-title"><span class="title-date">10月20日</span><i class="icon-toggle"></i></div>
+			<div class="area-cont">
+				<p class="cont-line"><span class="">燃油费</span><span class="">40</span></p>
+				<p class="cont-line"><span class="">基建费</span><span class="">50</span></p>
+				<p class="cont-line"><span class="">机器燃料费</span><span class="">1</span></p>
+				<p class="cont-line"><span class="">总计</span><span class="">￥231</span></p>
+			</div>
+		</div>
+		<div>fengexian</div>
+		<div id="test"></div>
+		<script id="areawrap_tmpl" type="text/template">
+			{{ if(it.success){ }}
+				<div class="area-wrap">
+					<div class="area-title"><span class="title-date">{{=it.data.date}}</span><i class="icon-toggle"></i></div>
+					<div class="area-cont">
+						<p class="cont-line"><span class="">燃油费</span><span class="">{{=it.data.ranyou}}</span></p>
+						<p class="cont-line"><span class="">基建费</span><span class="">{{=it.data.jijian}}</span></p>
+						<p class="cont-line"><span class="">机器燃料费</span><span class="">{{=it.data.ranliao}}</span></p>
+						<p class="cont-line"><span class="">总计</span><span class="">￥{{=it.data.total}}</span></p>
+					</div>
+				</div>
+			{{ }else{ }}
+				<h2>暂无数据</h2>
+			{{ } }}
+			
+		</script>
+	</body>	
+	<script src="js/api.js"></script>
+	<script src="js/doT.js"></script>
+	<script src="js/index.js"></script>
+	<script type="text/javascript">
+		var obj = {
+			success: true,
+			data: {
+				date: '10月01日',
+				ranyou: 100,
+				jijian: 2,
+				ranliao: 30,
+				total: 400
+			}
+		};
+		var tmpl =  document.getElementById('areawrap_tmpl').innerHTML;
+		var doTmpl = doT.template(tmpl);
+		console.log(doTmpl(obj));
+		document.getElementById('test').innerHTML = doTmpl(obj);
+	</script>
+</html>

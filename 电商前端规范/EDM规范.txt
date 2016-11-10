@@ -1,0 +1,38 @@
+Email Direct Marketing:电子邮件营销 
+
+1、页面布局用table，禁止使用float、position等布局方法
+2、所有的样式写在HTML标签的style属性，包括重置样式，比如p默认有margin属性，所以每用一个p都要写margin:0;，每个标签都要写font-size
+3、尽可能避免background-image，当无法避免时，辅以background-color，确保图片加载不出来时，也能有颜色显示
+
+
+
+
+我自己的问题：
+韩文font-size用微软雅黑有问题改成了Arial
+
+1.EDM里所有图片都要加上border:0; 并且要有alt, alt如果没有具体的表述，可以为空
+	
+很多att=""border="" 那个border和前面的引号之间没有空格 所以有些低版本浏览器  就没有识别那个border="0"所以有边框
+
+有一些属性里边的内容换行了所以有边框
+
+2.链接都要加_blank
+
+3.margin是尽可能少用
+
+4.a标签如果包含p这种块级元素，在低版本的IE点击会失效
+
+  a标签display:block低版本不管用 最简单办法就截一张图
+	
+
+
+5.在EDM里，字体(eg：font-family:'微软雅黑';)也要设置在文字的包裹元素里
+  比如：<a href="#" style="font-family:xxx;">aaa</a>
+  放在父元素也会有兼容性问题
+
+6.在outlook(邮件客户端：电子邮件与个人信息管理)中，display属性是被忽略的
+
+7.line-height padding 每个都要设 有些邮箱会重置的
+
+8.你再最外层html上设一个很大的padding line-height font-size 帮助你排查
+

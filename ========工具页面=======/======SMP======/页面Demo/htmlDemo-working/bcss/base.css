@@ -1,0 +1,582 @@
+@charset "utf-8";
+
+/**
+* base style
+* 包含浏览器相关、重置声明、公用组件和页面模块
+* 创建时间：2013-09-02 by YangHuanmin
+*/
+/* reset declare */
+html,body,legend,header,footer,nav,section,article,menu,img,h1,h2,h3,h4,h5,h6,hr,p,ul,ol,li,dl,dt,dd,form,input,button,select,fieldset{margin:0;padding:0;outline:none;}
+html{background:url(../../image/bd-bg.png);/*background-attachment:fixed;*/}
+html,body{min-height:100%;}
+body{font:16px/1.5 Tahoma,'微软雅黑';color:#444;}
+a{color:#444;text-decoration:none;}
+i,em{font-style:normal;}
+ul,ol,li{list-style:none;}
+img{border:0;}
+input,select,textarea,button{font-size:inherit;font-family:inherit;}
+textarea{resize:none;}
+/* style */
+.style-1,.style-2,.style-3{
+	background-repeat:no-repeat;
+	/*background-position:center center;*/
+	-webkit-background-size:100% 100%;
+	-moz-background-size:100% 100%;
+	-o-background-size:100% 100%;
+	-ms-background-size:100% 100%;
+	background-size:100% 100%;
+}
+.style-1{background-image:url(/app/base/images/style-1-bd.jpg);}
+.style-2{background-image:url(img/style-2-bd.jpg);}
+.style-3{background-image:url(img/style-3-bd.jpg);}
+.style-4{
+	background-color:#0288b5;
+	background-image:-webkit-gradient(linear, center top, center bottom, from(#35cafc), to(#0288b5));
+	background-image:-webkit-linear-gradient(#35cafc, #0288b5);
+	background-image:-moz-linear-gradient(#35cafc, #0288b5);
+	background-image:-o-linear-gradient(#35cafc, #0288b5);
+	background-image:-ms-linear-gradient(#35cafc, #0288b5);
+	background-image:linear-gradient(#35cafc, #0288b5);
+}
+.style-5{background:#222;}
+.style-6{background:#444;}
+.style-7{background:#0093c5;}
+.style-8{background:#00aee8;}
+.style-9{background:#009700;}
+.style-10{background:#00b200;}
+/* tools */
+.fl{float:left;}
+.fr{float:right;}
+.f-cb:after{content:'';clear:both;display:table;font-size:0;}
+.f-db{width:100%;
+	display:-webkit-box;
+	display:-moz-box;
+	display:-o-box;
+	display:-ms-box;
+	display:box;
+}
+.f-bf-2{ 
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	-o-box-flex:1;
+	-ms-box-flex:1;
+	box-flex:1;
+}
+
+.f-bf-1{
+	display:block!important;
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	-o-box-flex:1;
+	-ms-box-flex:1;
+	box-flex:1;
+}
+.f-hr:after{content:'';border-width:2px 50px 0;border-color:transparent;display:block;height:0;margin-top:10px;
+	-webkit-border-image:url(../../image/line-hoz.png) 2 50 0 50 round stretch;
+	-moz-border-image:url(../../image/line-hoz.png) 2 50 0 50 round stretch;
+	-o-border-image:url(../../image/line-hoz.png) 2 50 0 50 round stretch;
+	-webkit-border-image:url(../../image/line-hoz.png) 2 50 0 50 round stretch;
+	border-image:url(../../image/line-hoz.png) 2 50 0 50 round stretch;
+}
+/* layout */
+.g-wp{min-height:100%;margin-bottom:-65px;}
+/* .g-bd{padding-bottom:65px;} */
+.g-bd > section{padding:8px 0;margin:0 8px;}
+/* header */ 
+.g-hd{height:45px;line-height:45px;color:#fff;text-align:center;
+	background-color:#017bc9;
+	background-image:-webkit-gradient(linear, top center, bottom center, from(#017bc9), to(#0070b8));
+	background-image:-webkit-linear-gradient(#017bc9, #0070b8);
+	background-image:-moz-linear-gradient(#017bc9, #0070b8);
+	background-image:-o-linear-gradient(#017bc9, #0070b8);
+	background-image:-ms-linear-gradient(#017bc9, #0070b8);
+	background-image:linear-gradient(#017bc9, #0070b8);
+}
+.g-hd h1{font-size:20px;font-weight:normal;padding:0 50px;white-space:nowrap;}
+.g-hd .back{padding-right:2px;background:url(/app/base/images/set-line.png) no-repeat right center;position:absolute;left:0;top:0;}
+.g-hd .back:after{content:'';width:45px;height:45px;float:left;background:url(/app/base/images/i-square-b.png);}
+.g-hd .home-l{position:absolute;left:0;top:0;}
+.g-hd .home,
+.g-hd .set{position:absolute;top:0;right:0;width:50px;height:45px;padding-left:2px;background:url(/app/base/images/set-line.png) no-repeat 0 center;cursor:pointer;z-index:5;}
+.g-hd .feedback{position:absolute;top:0;right:50px;width:50px;height:45px;padding-left:2px;background:url(/app/base/images/set-line.png) no-repeat 0 center;cursor:pointer;z-index:5;}
+.g-hd .refresh{position:absolute;top:0;right:50px;width:50px;height:45px;padding-left:2px;background:url(/app/base/images/set-line.png) no-repeat 0 center;cursor:pointer;z-index:5;}
+.g-hd .set:before{content:'';background:url(img/i-set-header.png) no-repeat center center;width:50px;height:45px;display:block;background-color:rgba(0,0,0,.2);}
+.g-hd .set ul{position:absolute;top:45px;right:0;width:50px;display:none;}
+.g-hd .cur ul{display:block;}
+.g-hd .set li{height:45px;cursor:pointer;}
+.g-hd  a{color:#fff;}
+/* footer */
+/* ui form */
+.u-ipt,
+.u-btn
+{padding-left:10px;border:0;height:42px;line-height:42px;vertical-align:middle;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+}
+
+.u-btn{background-color:#f60;cursor:pointer;color:#fff;padding:0 20px;white-space:nowrap;text-align:center;}
+.btn-cont{margin:20px 5px;}
+.btn{display:inline-block;overflow:hidden;border:1px solid #f50;border-radius:10px;width:100%;color:#fff;}
+.btn span{float:left;opacity:.9;border-radius:8px;text-align:center;width:100%;border-left:1px solid #f90;border-top:1px solid #f90;
+	background-color:#f60;
+	/*background-image:-webkit-gradient(linear, center top, center bottom, from(#1e2224), to(#151718));
+	background-image:-webkit-linear-gradient(#1e2224, #151718);
+	background-image:-moz-linear-gradient(#1e2224, #151718);
+	background-image:-o-linear-gradient(#1e2224, #151718);
+	background-image:-ms-linear-gradient(#1e2224, #151718);
+	background-image:linear-gradient(#1e2224, #151718);*/
+}
+.btn-large{height:112px;font-size:65px;line-height:112px;letter-spacing:.2em;}
+.btn-medium{height:65px;font-size:26px;line-height:65px;}
+.btn-medium_new{height:45px;font-size:20px;line-height:45px;}
+/* 主页 */
+.m-home .s{padding:10px;}
+.m-home .i-tasks{background-image:url(img/i-home-tasks.png);}
+.m-home .i-task{background-image:url(img/i-home-task.png);}
+.m-home .i-dynamic{background-image:url(img/i-home-dynamic.png);}
+.m-home .i-adrlists{background-image:url(img/i-home-adrlists.png);}
+.m-home .i-adrlist{background-image:url(img/i-home-adrlist.png);}
+.m-home .i-change{background-image:url(img/i-home-change.png);}
+.m-home .i-weather{background-image:url(img/i-home-weather.png);}
+.m-home .i-baggage{background-image:url(img/i-home-baggage.png);}
+.m-home .i-logout{background:url(img/i-logout.png) no-repeat right 6px;padding-right:20px;}
+.m-home ul{width:242px;margin:0 auto;padding:5px 1px 15px 0;position:relative;left:-25px;}
+.m-home ul li{float:left;width:110px;height:110px;overflow:hidden;margin:0 1px 1px 0;background-color:rgba(0,0,0,.2);background-position:center 30px;background-repeat:no-repeat;position:relative;}
+.m-home ul a{width:110px;height:30px;padding-top:70px;text-align:center;display:block;text-decoration:none;font-size:18px;}
+.m-home ul b{position:absolute;top:5px;right:5px;}
+.m-home ul li:hover{background-color:rgba(0,0,0,.4);}
+.m-home ul li:hover:after{content:'';background:url(img/i-square-m.png);background-size:100% 100%;width:18px;height:18px;position:absolute;bottom:0;right:0;display:block;}
+.m-home .handle{position:fixed;bottom:10px;right:10px;width:35px;text-align:center;}
+.m-home .handle .i{width:22px;height:22px;background-position:center center;background-repeat:no-repeat;display:block;margin:15px auto;position:relative;}
+.m-home .handle .i-say{background-image:url(img/i-home-say.png);}
+.m-home .handle .i-say i{position:absolute;height:14px;line-height:14px;background:#ff472a;border-radius:9px;top:-14px;right:-10px;font-size:12px;font-family:Arial;padding:3px 5px;}
+.m-home .handle .i-set{background-image:url(img/i-home-set.png);}
+.m-home .handle .i-skin{background-image:url(img/i-home-skin.png);}
+.m-home .handle .i-down{background-image:url(img/i-home-down.png);}
+
+/* 皮肤设置 */
+.m-home .set ol{position:absolute;bottom:25px;right:0;width:40px;display:none;left:50%;margin-left:-18px;}
+.m-home .cur ol{display:block;}
+.m-home .set ol li{height:40px;cursor:pointer;}
+
+
+/* 任务 */
+.m-task{margin:0 8px;overflow:hidden;padding:0;}
+.m-task .tabs{padding:9px 0;height:52px;margin-left:-1px;}
+.m-task .tabs li{float:left;width:50%;margin-right:-1px;opacity:.6;position:relative;}
+.m-task .tabs li:last-child a{border-right:0;}
+.m-task .tabs a{border-width:0 1px 0 1px;border-style:solid;border-color:#fff;height:52px;display:block;text-align:center;}
+.m-task .tabs em{padding-left:36px;display:inline-block;vertical-align:top;line-height:52px;white-space:nowrap;}
+.m-task .tabs .i-now{background:url(img/i-task-now.png) no-repeat 0 center;}
+.m-task .tabs .i-add{background:url(img/i-task-add.png) no-repeat 0 center;}
+.m-task .tabs .active{opacity:1;}
+.m-task .tabs .active:after{content:'';position:absolute;bottom:0;left:50%;border-width:6px 6px 6px 6px;border-style:solid;border-color:transparent transparent #fff transparent;display:block;}
+.m-task .list li{min-height:62px;background-color:rgba(0,0,0,.2);margin-top:1px;position:relative;display:table;width:100%;}
+.m-task .list a{display:table-row;width:100%;}
+.m-task .time{min-width:72px;width:24%;display:table-cell;vertical-align:middle;text-align:center;line-height:72px;background-color:rgba(0,0,0,.2);font-size:22px;}
+.m-task .info{display:table-cell;vertical-align:middle;border-right:4px solid transparent;opacity:.7;white-space:nowrap;padding:0 30px 0 10px;position:relative;}
+.m-task .info:before{content:'';display:block;position:absolute;right:10px;top:50%;margin-top:-4px;border-top:1px solid #fff;border-right:1px solid #fff;width:7px;height:7px;
+	-webkit-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	transform:rotate(45deg);
+}
+.m-task .numb{font-size:12px;}
+.m-task .desc{overflow:hidden;}
+.m-task .list li:hover{background-color:rgba(0,0,0,.3);}
+.m-task .list li:hover .info{opacity:1;border-right-color:#00d9d9;}
+/* 任务详情 */
+.m-task-info .list li{line-height:40px;margin-top:1px;background-color:rgba(0,0,0,.2);}
+.m-task-info .cont{display:table;width:100%;}
+.m-task-info .item{padding:0 10px;width:30%;min-width:80px;white-space:nowrap;display:table-cell;vertical-align:middle;background-color:rgba(0,0,0,.2);text-align:right;}
+.m-task-info .info{display:table-cell;vertical-align:middle;padding-left:10px;}
+.m-task-info .timer{text-align:center;padding:20px 0;}
+.m-task-info .timer h2{color:#0ff;font-size:16px;font-weight:normal;padding:10px 0;}
+.m-task-info .timer ul{display:inline-block;overflow:hidden;vertical-align:middle;}
+.m-task-info .timer li{float:left;height:45px;line-height:45px;padding:0 16px 0 14px;background:url(/app/base/images/set-line.png) no-repeat 0 center;margin-left:-2px;}
+.m-task-info .timer em{font-size:40px;font-family:Arial;}
+/* 系统设置 */
+.m-options{overflow:hidden;}
+.m-options .tabs li:first-child{margin:0;}
+.m-options .tabs li{margin-left:1px;background-color:rgba(0,0,0,.2);}
+.m-options .tabs a{display:block;height:38px;padding-top:50px;border-top:4px solid transparent;text-align:center;background-position:center 10px;background-repeat:no-repeat;}
+.m-options .tabs .i-pw{background-image:url(img/i-password.png);}
+.m-options .tabs .i-up{background-image:url(img/i-update.png);}
+.m-options .tabs .i-fd{background-image:url(img/i-mail.png);}
+.m-options .tabs .active a{border-top-color:#00d9d9;}
+.m-options .cont{padding:20px 15px;background-color:rgba(0,0,0,.4);}
+.m-options .msg{text-align:center;padding:35px 0;color:#0ff;line-height:45px;}
+.m-options .msg:after,
+.m-options .msg:before{content:'';height:2px;overflow:hidden;display:block;background:url(../../image/line-hoz.png) no-repeat center 0;}
+/* 系统设置-密码修改 */
+.m-options .pw-cont dt{float:left;line-height:42px;}
+.m-options .pw-cont dd{margin:0 20px 0 120px; padding:4px 0 4px 0;position:relative;}
+.m-options .pw-cont .u-ipt{width:100%;}
+.m-options .pw-cont .u-btn{margin-top:10px;}
+/* 系统设置-更新版本 */
+.m-options .up-cont{text-align:center;line-height:42px;}
+.m-options .up-cont .u-btn{margin-left:20px;}
+/* 系统设置-问题反馈 */
+.m-options .fd-cont{margin-right:70px;position:relative;}
+.m-options .fd-cont .u-ipt{width:100%;height:80px;line-height:1.5;}
+.m-options .fd-cont .u-btn{position:absolute;left:100%;top:50%;margin-top:-21px;margin-left:10px;padding:0 10px;}
+/* 最新消息 */
+.m-news h2{font-weight:normal;font-size:18px;margin-right:100px;background-color:rgba(0,0,0,.2);padding:15px;}
+.m-news .list li{min-height:62px;background-color:rgba(0,0,0,.2);margin-top:1px;position:relative;display:table;width:100%;}
+.m-news h3{font-weight:bold;font-size:18px;margin-right:160px;background-color:rgba(0,0,0,.2);padding:15px;}
+.m-news li{background-color:rgba(0,0,0,.2);line-height:1.8;position:relative;margin-top:1px;opacity:.9;}
+.m-news li:before{content:'';display:block;position:absolute;right:10px;top:50%;margin-top:-4px;border-top:1px solid #fff;border-right:1px solid #fff;width:7px;height:7px;
+	-webkit-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	transform:rotate(45deg);
+}
+.m-news .time{min-width:72px;width:1%;display:table-cell;vertical-align:middle;text-align:center;line-height:72px;background-color:rgba(0,0,0,.2);font-size:22px;}
+.m-news li:hover{background-color:rgba(0,0,0,.3);opacity:1;}
+.m-news em{position:absolute;right:25px;top:50%;margin-top:-10px;line-height:20px;}
+/* 最新消息-详情 */
+.m-news .box{background-color:rgba(0,0,0,.3);padding:0 20px 20px;}
+.m-news .box-hd{position:relative;padding-bottom:10px;}
+.m-news .box h2{background:none;padding:10px 0;text-align:center;font-size:18px;margin:0;}
+.m-news .box em{position:static;display:block;text-align:right;}
+.m-news .box-bd{line-height:1.8;}
+.m-news .box-bd p{padding-bottom:10px;}
+/* ==== 航班动态、 通讯录 ==== */
+.m-flights .btn-hand{margin:5px 0 15px 0;}
+.m-flights .btn-hand .btn{height:40px;line-height:40px;margin-right:10px;}
+.m-flights .btn-hand .btn:last-child{margin:0;}
+/* 搜索 old */
+.m-flights .search{padding:20px 0;position:relative;}
+.m-flights .search dt{float:left;line-height:42px;}
+.m-flights .search dd{margin:0 78px 0 60px;position:relative;}
+.m-flights .search .u-ipt{width:100%;}
+.m-flights .search .u-btn{position:absolute;left:100%;top:0;}
+.m-flights .search-bar{text-align:center;padding:10px 0 20px;position:relative;}
+.m-flights .search-bar a{width:24px;height:24px;}
+.m-flights .search-bar .update{display:block;margin:0 auto;background:url(/app/base/images/i-refresh.png) center center no-repeat;}
+.m-flights .search-bar .seek{position:absolute;right:5px;top:10px;background:url(/app/base/images/i-search.png) center center no-repeat;}
+.m-flights .timer li{background-color:#f5f5f5;margin-top:1px;height:45px;line-height:45px;}
+.m-flights .timer .item{min-width:80px;text-align:center;background:#ededed;}
+.m-flights .timer .info{padding-right:10px;padding-left:10px;text-align:left;
+	-webkit-box-flex:4;
+	width: 160px;
+	-moz-box-flex:4;
+	-o-box-flex:4;
+	-ms-box-flex:4;
+	box-flex:4;
+}
+/* 航班详细信息 */
+.m-flights .details li{height:auto;}
+.m-flights .details .item{min-width:100px;width:20%;padding-right:10px;text-align:right;}
+.m-flights .details .info{text-align:left;padding-left:10px;}
+.m-flights .details .call{display:inline-block;vertical-align:top;padding-right:30px;background:url(img/i-tel.png) right center no-repeat;}
+.m-flights .details .link{padding-right:20px;display:block;position:relative;}
+.m-flights .details .link:after{content:'';display:block;position:absolute;right:10px;top:50%;margin-top:-4px;border-top:1px solid #fff;border-right:1px solid #fff;width:7px;height:7px;
+	-webkit-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	transform:rotate(45deg);
+}
+/* 航班天气 old */
+.m-flights .weather{text-align:center;margin-top:10px;}
+.m-flights .weather li{margin-right:1px;background-color:rgba(0,0,0,.4);}
+.m-flights .weather li:last-child{margin:0;}
+.m-flights .weather .item{line-height:32px;padding-top:10px;}
+.m-flights .weather .info{font-size:35px;padding:10px 0;}
+/* 航班天气 */
+.m-flights .weather-search dl{position:relative;margin:20px 5px;}
+.m-flights .weather-search dt{margin-right:110px;}
+.m-flights .weather-search dd{position:absolute;width:100px;right:0;top:0;}
+.m-flights .weather-search input[type=text]{width:100px;}
+.m-flights .weather-search select{width:100%;}
+.m-flights .weather-info h2{font-size:18px;text-align:center;padding:5px 0 10px;font-weight:normal;}
+.m-flights .weather-info li{line-height:1.5;}
+.m-flights .weather-info .tel{padding:0;}
+.m-flights .weather-info .state{position:absolute;right:10px;top:10px;}
+.m-flights .weather-info .item,
+.m-flights .weather-info .info{padding-top:10px;padding-bottom:10px;position:relative;}
+/* 航班旅客信息 */
+.m-flights .traveller{background-color:rgba(0,0,0,.4);}
+.m-flights .traveller a,
+.m-flights a.tel{display:block;padding:10px 28px 0;position:relative;}
+.m-flights .traveller a:after{margin-top:15px;}
+.m-flights .traveller a:before,
+.m-flights a.tel:before{content:'';position:absolute;margin-top:-10px;top:50%;right:20px;width:23px;height:20px;background:url(img/i-tel.png);}
+.m-flights .traveller a.nocall:before{display:none;}
+.m-flights .traveller span{display:block;}
+.m-flights .card{padding:10px 10px 10px 40px;background:url(img/i-card.png) 0 center no-repeat;font-size:20px;margin:0 5px 5px 5px;}
+/* 航班列表 */
+.m-flights .flights{margin-bottom:10px;}
+.m-flights .flights li{display:table;border-bottom:1px dotted #c1c1c0;width:100%;
+background-color:#ededed;
+}
+.m-flights .flights a{display:table-row;/*background-color:rgba(0,0,0,.2);*/}
+.m-flights .flights a:hover{/*background-color:rgba(0,0,0,.4);*/}
+.m-flights .flights a:hover .info{border-color:#f60;}
+.m-flights .flights p{opacity:.8;}
+.m-flights .flights div{display:table-cell;vertical-align:middle;padding:10px;line-height:2;position:relative;}
+.m-flights .flights .item{/*background-color:rgba(0,0,0,.1);*/text-align:center;width:30%;}
+.m-flights .flights .info{border-right:4px solid transparent;}
+.m-flights .flights .info:after{content:'';display:block;position:absolute;right:5px;top:50%;margin-top:-3px;border-top:1px solid #fff;border-right:1px solid #fff;width:6px;height:6px;
+	-webkit-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	transform:rotate(45deg);
+}
+.m-flights .dynamic .info:before{content:'';width:32px;height:20px;background: no-repeat center center;position:absolute;right:20px;top:50%;margin-top:-10px;}
+.m-flights .dynamic .takeoff .info:before{background-image:url(img/i-flights-takeoff.png);}
+.m-flights .dynamic .drop .info:before{background-image:url(img/i-flights-drop.png);}
+#moredata{background:#f60;color:#fff;border-radius:5px;margin-top:10px;padding:0;
+	height:45px;line-height:45px;border:1px solid #dd4e00;border-radius:8px;color:#fff;font-size:20px;width:100%;display:inline-block;vertical-align:middle;cursor:pointer;text-shadow:1px 1px 2px #6b2803;text-align:center;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-o-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+	box-sizing:border-box;
+	background-color:#e94a03;
+	background-image:-webkit-gradient(linear, center top, center bottom, from(#fe6500), to(#e94a03));
+	background-image:-webkit-linear-gradient(#fe6500, #e94a03);
+	background-image:-moz-linear-gradient(#fe6500, #e94a03);
+	background-image:-o-linear-gradient(#fe6500, #e94a03);
+	background-image:-ms-linear-gradient(#fe6500, #e94a03);
+	background-image:linear-gradient(#fe6500, #e94a03);
+
+}
+/* 通讯录 */
+.m-flights .connect{padding:5px 25px 5px;margin-top:1px;}
+.m-flights .connect h2{font-size:20px;padding:5px 0 0;font-weight:normal;}
+.m-flights .connect a{display:block;padding:5px 10px 0 0;position:relative;}
+.m-flights .connect a:after{margin-top:15px;}
+.m-flights .connect a:before{content:'';display:block;position:absolute;right:35px;top:50%;margin-top:-4px;border-top:1px solid #333;border-right:1px solid #333;width:9px;height:9px;
+	-webkit-transform:rotate(45deg);
+	-moz-transform:rotate(45deg);
+	-o-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	transform:rotate(45deg);
+}
+.m-flights .connect .f-hr:last-child{padding-bottom:15px;}
+.m-flights .connect .f-hr:last-child:after{display:none;}
+/* 页签 */
+.m-flights .tabs{text-align:center;}
+.m-flights .tabs a:last-child{margin-right:0}
+.m-flights .tabs a{color:#999;text-align:center;border-top:4px solid transparent;margin-right:1px;display:inline-block;vertical-align:middle;padding:0 25px;
+border:1px solid #b3b2b2;border-left-width:0;line-height:36px;
+	background-color:#e4e4e4;
+	background-image:-webkit-gradient(linear, top center, bottom center, from(#fefefe), to(#e4e4e4));
+	background-image:-webkit-linear-gradient(#fefefe, #e4e4e4);
+	background-image:-moz-linear-gradient(#fefefe, #e4e4e4);
+	background-image:-o-linear-gradient(#fefefe, #e4e4e4);
+	background-image:-ms-linear-gradient(#fefefe, #e4e4e4);
+	background-image:linear-gradient(#fefefe, #e4e4e4);
+}
+.m-flights .tabs .active{border-color:#0077b5;box-shadow:1px 1px 4px #01527b inset;color:#fff;text-shadow:1px 1px 1px #444;
+ackground-color:#0077b5;
+	background-image:-webkit-gradient(linear, top center, bottom center, from(#0280c1), to(#0077b5));
+	background-image:-webkit-linear-gradient(#0280c1, #0077b5);
+	background-image:-moz-linear-gradient(#0280c1, #0077b5);
+	background-image:-o-linear-gradient(#0280c1, #0077b5);
+	background-image:-ms-linear-gradient(#0280c1, #0077b5);
+	background-image:linear-gradient(#0280c1, #0077b5);
+}
+/* 航班动态查询 */
+.m-flights .query{margin-top:1px;/*background-color:rgba(0,0,0,.4);*/padding:5px 0;}
+.m-flights .query dl{padding:20px 0;line-height:42px;position:relative;}
+.m-flights .query dt{padding:0 10px;width:80px;text-align:right;}
+.m-flights .query dd{margin-right:20px;}
+.m-flights .query input{width:100%;}
+.m-flights .query .f-hr:last-child:after{display:none;}
+.m-flights .query .f-hr:after{margin-top:0;}
+.m-flights .query .swap-cont{position:relative;zoom:1;z-index:1;}
+.m-flights .query .swap{position:absolute;width:36px;height:36px;background:url(img/i-flights-swap.png);left:50px;top:100%;margin:-18px 0 0 -18px;}
+
+/* ==== 航班动态、 通讯录 end ==== */
+/* 登录 */
+.m-login .box{background-color:rgba(0,0,0,.4);padding:20px;line-height:42px;}
+.m-login .box dl{padding:10px 0;}
+.m-login .box dt{width:80px;text-align:center;}
+.m-login .box .u-btn{width:50%;min-width:80px;}
+.m-login .box .u-ipt{width:100%;}
+/* 行李、中转信息查询 */
+.m-query .query{background-color:rgba(0,0,0,.4);padding:10px 0;}
+.m-query .query dl{padding:10px 0 5px;margin:0 10px;line-height:42px;}
+.m-query .query dl:after{margin-top:15px;}
+.m-query .query dl:last-child:after{display:none;}
+.m-query .query dt{float:left;width:100px;text-align:right;padding-right:10px;}
+.m-query .query dd{margin-left:110px;margin-right:20px;}
+.m-query .query input{width:100%;vertical-align:middle;}
+.m-query .result dt{text-align:center;}
+.m-query .result dd{text-align:right;}
+.m-query .details table{width:100%;border:0;border-spacing:0;}
+.m-query .details th{text-align:left;padding:15px 10px;}
+.m-query .details td{background-color:rgba(0,0,0,.4);padding:15px 10px;}
+.m-query .details .f-hr{padding:0 10px;}
+.m-query .details .f-hr:after{margin:0;}
+
+
+#pullDown{
+	background:rgba(0,0,0,.2);
+	height:40px;
+	line-height:40px;
+	padding:5px 10px; 
+	font-weight:bold;
+	font-size:14px;
+}
+#pullDown .pullDownIcon {
+	display:block; float:left;
+	width:40px; height:40px;
+	background:url(img/pull-icon@2x.png) 0 0 no-repeat;
+	-webkit-background-size:40px 80px; background-size:40px 80px;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:250ms;	
+}
+#pullDown .pullDownIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+} 
+#pullDown.flip .pullDownIcon {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon{
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms; 
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+@-webkit-keyframes loading {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+
+.humane {
+  position: fixed;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  z-index: -1;
+}
+.humane.humane-animate,
+.humane.humane-js-animate {
+  z-index: 100000;
+}
+.humane {
+  font-family: Ubuntu, Verdana, sans-serif;
+  font-size: 20px;
+  letter-spacing: -1px;
+  top: 25%;
+  left: 25%;
+  opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  width: 50%;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAACWCAYAAAAfduJyAAAABmJLR0QA/wD/AP+gvaeTAAAAPElEQVQokWP4////Gab///8zQAgGBgYo8e/fP2QxSpSgydJNCYJLRSVoPqeOkgEIYop9TrGbSfcWpW4GAFeF/7lb/oWBAAAAAElFTkSuQmCC');
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255,255,255,0.80)), color-stop(1, rgba(150,150,150,0.80))) no-repeat;
+  background: -moz-linear-gradient(top, rgba(255,255,255,0.80) 0%, rgba(150,150,150,0.80) 100%) no-repeat;
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0.80) 0%, rgba(150,150,150,0.80) 100%) no-repeat;
+  background: -ms-linear-gradient(top, rgba(255,255,255,0.80) 0%, rgba(150,150,150,0.80) 100%) no-repeat;
+  background: -o-linear-gradient(top, rgba(255,255,255,0.80) 0%, rgba(150,150,150,0.80) 100%) no-repeat;
+  background: linear-gradient(top, rgba(255,255,255,0.80) 0%, rgba(150,150,150,0.80) 100%) no-repeat;
+  *background-color: #fff;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  text-shadow: 0 -1px 1px rgba(221,221,221,0.40);
+  -moz-box-shadow: 0 4px 4px -4px #eee;
+  -webkit-box-shadow: 0 4px 4px -4px #eee;
+  -ms-box-shadow: 0 4px 4px -4px #eee;
+  -o-box-shadow: 0 4px 4px -4px #eee;
+  box-shadow: 0 4px 4px -4px #eee;
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.humane p,
+.humane ul {
+  margin: 0;
+  padding: 0;
+}
+.humane ul {
+  list-style: none;
+}
+.humane.humane-info {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAYAAAAp8ov1AAAABmJLR0QA/wD/AP+gvaeTAAAAR0lEQVQokWNISfn/n4mBgeE/EwMDAwMqQYQYmdoGlxgjI4rY//+Dx2nUFRsQZ2ALTrQQp8QL1DWeqASC014y7aCx8QwMDAwA1aZBIulmpvwAAAAASUVORK5CYII=');
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #6464ff), color-stop(1, rgba(100,100,255,0.80))) no-repeat;
+  background: -moz-linear-gradient(top, #6464ff 0%, rgba(100,100,255,0.80) 100%) no-repeat;
+  background: -webkit-linear-gradient(top, #6464ff 0%, rgba(100,100,255,0.80) 100%) no-repeat;
+  background: -ms-linear-gradient(top, #6464ff 0%, rgba(100,100,255,0.80) 100%) no-repeat;
+  background: -o-linear-gradient(top, #6464ff 0%, rgba(100,100,255,0.80) 100%) no-repeat;
+  background: linear-gradient(top, #6464ff 0%, rgba(100,100,255,0.80) 100%) no-repeat;
+  *background-color: #6464ff;
+}
+.humane.humane-success {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAYAAAAp8ov1AAAABmJLR0QA/wD/AP+gvaeTAAAAGklEQVQokWNI+Z9yhomBgYFhlBglRonhSgAAFX0EItSd0k8AAAAASUVORK5CYII=');
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #64ff64), color-stop(1, rgba(100,255,100,0.80))) no-repeat;
+  background: -moz-linear-gradient(top, #64ff64 0%, rgba(100,255,100,0.80) 100%) no-repeat;
+  background: -webkit-linear-gradient(top, #64ff64 0%, rgba(100,255,100,0.80) 100%) no-repeat;
+  background: -ms-linear-gradient(top, #64ff64 0%, rgba(100,255,100,0.80) 100%) no-repeat;
+  background: -o-linear-gradient(top, #64ff64 0%, rgba(100,255,100,0.80) 100%) no-repeat;
+  background: linear-gradient(top, #64ff64 0%, rgba(100,255,100,0.80) 100%) no-repeat;
+  *background-color: #64ff64;
+}
+.humane.humane-error {
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAADICAYAAAAp8ov1AAAABmJLR0QA/wD/AP+gvaeTAAAAGklEQVQokWP4n5JyhomBgYFhlBglRonhSgAAFhgEIhjGqQkAAAAASUVORK5CYII=');
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff6464), color-stop(1, rgba(255,100,100,0.80))) no-repeat;
+  background: -moz-linear-gradient(top, #ff6464 0%, rgba(255,100,100,0.80) 100%) no-repeat;
+  background: -webkit-linear-gradient(top, #ff6464 0%, rgba(255,100,100,0.80) 100%) no-repeat;
+  background: -ms-linear-gradient(top, #ff6464 0%, rgba(255,100,100,0.80) 100%) no-repeat;
+  background: -o-linear-gradient(top, #ff6464 0%, rgba(255,100,100,0.80) 100%) no-repeat;
+  background: linear-gradient(top, #ff6464 0%, rgba(255,100,100,0.80) 100%) no-repeat;
+  *background-color: #ff6464;
+}
+.humane.humane-animate {
+  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.humane.humane-animate:hover {
+  opacity: 0.4;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  -moz-transform: scale(1.8);
+  -webkit-transform: scale(1.8);
+  -ms-transform: scale(1.8);
+  -o-transform: scale(1.8);
+  transform: scale(1.8);
+}
+.humane.humane-js-animate {
+  opacity: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.humane.humane-js-animate:hover {
+  opacity: 0.4;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+}
+
+option {
+background: rgba(81, 107, 84, 0.5);
+}

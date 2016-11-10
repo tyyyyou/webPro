@@ -1,0 +1,25 @@
+/* global use */
+* { box-sizing: border-box; }
+
+.fr { float: right; }
+
+.fl { float: left; }
+
+.show { display: block; }
+
+.hide { display: none; }
+
+.up { transform: rotate(0); }
+
+.down { transform: rotate(180deg); }
+
+.p-wrap { font-size: 16px; color: #333333; }
+
+.area-wrap .lighter { color: #999999; }
+.area-wrap .area-title { height: 60px; padding: 8px 14px 7px 19px; background-color: #fff; line-height: 22px; }
+.area-wrap .icon-toggle { display: inline-block; width: 18px; height: 18px; margin-top: 12px; background: url(../img/icon-toggle.png) no-repeat center; background-size: 100% 100%; }
+.area-wrap .area-title, .area-wrap .cont-line { border-top: 1px solid #dddddd; border-bottom: 1px solid #dddddd; }
+.area-wrap .cont-line { padding: 0 14px 0 19px; line-height: 40px; }
+.area-wrap .total-price .fr { color: #23aaff; }
+
+/*# sourceMappingURL=style.css.map */

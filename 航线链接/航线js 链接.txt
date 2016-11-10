@@ -1,0 +1,9 @@
+一、走流程链接
+http://en.ch.com/flights/SHA-SZX.html?oricity=Shanghai&destcity=Shenzhen&fdate=2016-05-31&MType=1&ANum=1&CNum=0&INum=0&SType=0
+
+http://flights.ch.com/' + ori + '-' + des + '.html?IfRet=false' + '&OriCode=' + ori + '&DestCode=' + des + '&FDate=' + fdate + '&MType=0&ANum=1&CNum=0&INum=0&SType=0' + '&intcmp=' + code;
+
+二、走活动仓 一般秒杀都走活动仓 
+
+中文:
+'/AirFlights/ActivitiesFlights?OriCityCode=' + oriCode + '&DestCityCode=' + desCode + '&Is444=true&intcmp=' + code + '&t=' + new Date().getTime()

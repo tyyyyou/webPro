@@ -1,0 +1,29 @@
+直飞：
+
+$('body').on('click', '.btn11',function () {
+      var dep = $(this).closest('.btn11').attr('go');
+      var arr = $(this).closest('.btn11').attr('dep');
+      window.open('http://flights.ch.com/' + dep + '-' + arr + '.html?delay=15&intcmp=znqdc_activity_' + dep + arr + '_20160624');
+ })
+
+空铁和中转的不能判断有没有航班
+
+空铁：
+
+$('body').on('click', '.btn11',function () {
+      var dep = $(this).closest('.btn11').attr('go');
+      var arr = $(this).closest('.btn11').attr('dep');
+      window.open('http://flights.ch.com/' + dep + '-' + arr + '.html?delay=15&SType=23&intcmp=znqdc_activity_' + dep + arr + '_20160624');
+ })
+
+中转：
+
+$('body').on('click', '.btn11',function () {
+      var dep = $(this).closest('.btn11').attr('go');
+      var arr = $(this).closest('.btn11').attr('dep');
+      window.open('http://flights.ch.com/' + dep + '-' + arr + '.html?delay=15&SType=1&intcmp=znqdc_activity_' + dep + arr + '_20160624');
+ })
+
+
+
+

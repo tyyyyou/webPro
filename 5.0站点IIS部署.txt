@@ -1,0 +1,24 @@
+baccount.ch.com   E:\源代码管理\网站项目\branches_v5.0\v5.0\ch\UI\Spring.Www.Web.Account
+ben.ch.com        E:\源代码管理\网站项目\branches_v5.0\v5.0\ch\UI\Spring.Www.Web.EN
+bflights.ch.com   E:\源代码管理\网站项目\branches_v5.0\v5.0\ch\UI\Spring.Www.Web.Flights
+bhelp.ch.com      E:\源代码管理\网站项目\branches_v5.0\v5.0\ch\UI\Spring.Www.Web.Help
+bhk.ch.com        E:\源代码管理\网站项目\branches_v5.0\v5.0\ch\UI\Spring.Www.Web.HK
+bi.ch.com         E:\源代码管理\网站项目\branches_v5.0\v5.0\bi\UI\UI.Web  
+bjp.ch.com        E:\源代码管理\网站项目\branches_v5.0\v5.0\ch\UI\Spring.Www.Web.JP
+bkr.ch.com        E:\源代码管理\网站项目\branches_v5.0\v5.0\ch\UI\Spring.Www.Web.KR
+border.ch.com     E:\源代码管理\网站项目\branches_v5.0\v5.0\border\UI\UI.Web
+bpassport.ch.com  E:\源代码管理\网站项目\branches\Spring.SSO\Spring.SSO.STS
+bpayment.ch.com   E:\源代码管理\网站项目\branches\MobileWeb\Spring.MainWeb\Spring.Payment.Web
+bth.ch.com        E:\源代码管理\网站项目\branches_v5.0\v5.0\ch\UI\Spring.Www.Web.TH
+bticket.ch.com    E:\源代码管理\网站项目\branches_v5.0\v5.0\ch\UI\Spring.Www.Web.Tickets
+bwww.ch.com       E:\源代码管理\网站项目\branches_v5.0\v5.0\ch\UI\Spring.Www.Web.CN
+
+
+
+C:\Windows\System32\inetsrv\config\applicationHost.config
+
+
+
+
+
+ 

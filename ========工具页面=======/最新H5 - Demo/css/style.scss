@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+@import url(normalize.css);
+
+// function
+@mixin flex-box() {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;    
+}
+@mixin prefix($name,$value) {
+    -webkit-#{$name}:$value;
+    -moz-#{$name}:$value;
+    -ms-#{$name}:$value;
+    -o-#{$name}:$value;
+    #{$name}:$value;
+}
+@function ptr( $px) {
+    @return $px*(1/100)*1rem;
+}
+
+/* util */
+.fl {float: left;}
+.fr {float: right;}
+.clearfix{zoom: 1}
+.clearfix:before, .clearfix:after{content: '';display: table}
+.clearfix:after{clear: both}
+
+// global use
+$mainFont:"微软雅黑",sans-serif;
+@mixin prefix($name,$value) {
+    -webkit-#{$name}:$value;
+    -moz-#{$name}:$value;
+    -ms-#{$name}:$value;
+    -o-#{$name}:$value;
+    $name:$value;
+}
+
+

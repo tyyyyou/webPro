@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+    <style>
+        *{padding: 0;margin:0;font-size: 12px;}
+        /*div{display: table-cell;width: 200px;border:1px solid blue;vertical-align: middle;}*/
+
+    </style>
+
+	全选<input type="checkbox" class="parentel" />
+	<div>
+		选项一<input type="checkbox" class="subitem">
+		选项二<input type="checkbox" class="subitem">
+		选项三<input type="checkbox" class="subitem">
+		选项四<input type="checkbox" class="subitem">
+	</div>	
+    
+    <script>
+
+    	//js模块化(面对对象：这样的写法会暴露所有模块成员，内部状态可以被外部改写)
+    	//写法一
+    	Animal.prototype = function () {
+    		eat: function() {},
+    		run: function() {}
+    	}
+    	var animal = new Animal();
+    	animal.eat();
+
+    	//写法二
+    	var module1 = new Object({
+    		name: 'yuanyuan',
+    		eat: function() {
+    			//to do something...
+    		},
+    		run: function() {
+    			//to do something...
+    		}
+    	});
+    	module1.eat(); //调用
+
+    	//js模块化(立即执行函数写法：这样的写法不会暴露私有成员，为什么？？？)
+    	//匿名自执行函数内的变量或方法对外部不可见？？
+    	var module2 = (function() {
+    		var name = "haha";
+    		var eat = function() {
+    			//...
+    		};
+    		var run = function() {
+    			//...
+    		};
+    		return {
+    			eat : eat,
+    			run : run
+    		};
+    	})();
+    	module2.eat(); //调用
+
+    </script>
+
+</html>

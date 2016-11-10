@@ -1,0 +1,14 @@
+空巴：SType=23
+直飞：SType=0
+中转：SType=1
+
+adult： ANum
+child：CNum 
+infant：INum 
+货币：acstr
+插码：intcmp 
+是否返回：IfRet 
+去时间：FDate 
+回时间：RetFDate 
+去酒店时间：CheckInDate
+回酒店时间：CheckOutDate

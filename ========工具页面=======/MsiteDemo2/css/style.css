@@ -1,0 +1,17 @@
+.wid100 { width: 100%; }
+.db { display: block; }
+.p-wrap { font-family: "Arial"; }
+
+.p-desc {  }
+.desc-title { color: #007f51;font-family: "Century Gothic";font-size: .64rem;line-height: .64rem;margin: .53rem .37rem 0 .4rem;padding-bottom: .34rem;border-bottom: 1px solid #cccccc; }
+.desc-txt { margin: .34rem .54rem .8rem .45rem;line-height: .56rem;font-size: .346rem;color: #373737; }
+.desc-foot { height: .64rem;background-color: #f7f7f7;border-top: 1px solid #e0e0e0; }
+.btn-book { display: block;width: 6.746rem;height: 1.066rem;margin: .5333rem auto .5rem;border-radius: 12px;font-family: "Century Gothic";line-height: 1.066rem;text-align: center;background-color: #006c31;color: #fff;font-size: .4rem; }
+
+.p-footer { text-align: center; }
+.footer1 { font-size: .533rem;margin-top: 35px;margin-bottom: 58px; }
+.footer1 * {vertical-align: middle;}
+.icon-fb, .icon-ins { display: inline-block;width: 1.2rem;height: 1.2rem; }
+.icon-fb { background: url(../img/icon-fb.png) no-repeat;background-size: 100% 100%;margin: 0 .4rem 0 .5333rem; }
+.icon-ins { background: url(../img/icon-ins.png) no-repeat;background-size: 100% 100%; }
+.p-footer .desc-foot { height: 1.266rem;line-height: 1.266rem;font-size: .32rem;color: #7d7d7d; }

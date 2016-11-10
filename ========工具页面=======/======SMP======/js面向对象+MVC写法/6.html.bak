@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="format-detection" content="telephone=no, email=no" />
+		<!--SEO设置-->
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<!-- 启用360浏览器的极速模式(webkit) -->
+		<meta name="renderer" content="webkit">
+		<!-- 避免IE使用兼容模式 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+		<meta name="HandheldFriendly" content="true">
+		<!-- 微软的老式浏览器 -->
+		<meta name="MobileOptimized" content="320">
+		<!-- uc强制竖屏 -->
+		<meta name="screen-orientation" content="portrait">
+		<!-- QQ强制竖屏 -->
+		<meta name="x5-orientation" content="portrait">
+		<!-- UC强制全屏 -->
+		<meta name="full-screen" content="yes">
+		<!-- QQ强制全屏 -->
+		<meta name="x5-fullscreen" content="true">
+		<!-- UC应用模式 -->
+		<meta name="browsermode" content="application">
+		<!-- QQ应用模式 -->
+		<meta name="x5-page-mode" content="app">
+		<!-- windows phone 点击无高光 -->
+		<meta name="msapplication-tap-highlight" content="no">
+		<link rel="stylesheet" href="./css/style-ycode.css">
+		<title></title>
+	</head>
+	<script>
+	    //动态设置根字体
+	    var html = document.querySelector('html');
+	    html.style.fontSize = html.offsetWidth / 7.5 + 'px';
+    </script>
+	<body>
+		<section class="p-wrap">
+			<div class="price">消费金额：<span class="price-txt">￥560.0</span></div>
+			<div class="cnum" >
+				<p class="">银行卡号<span class="cnum-txt">6220 **** **** 6671</span><i class="icon-more"></i></p>
+			</div>
+			<ul class="select-body">
+				<li>银行卡号<span class="select-value">6220 **** **** 6670</span><i class="icon-del"></i></li>
+				<li>银行卡号<span class="select-value">6220 **** **** 6672</span><i class="icon-del"></i></li>
+				<li>银行卡号<span class="select-value">6220 **** **** 6673</span><i class="icon-del"></i></li>
+				<li>银行卡号<span class="select-value">6220 **** **** 6673</span><i class="icon-del"></i></li>
+				<li>银行卡号<span class="select-value">6220 **** **** 6673</span><i class="icon-del"></i></li>
+				<li>银行卡号<span class="select-value">6220 **** **** 6673</span><i class="icon-del"></i></li>
+			</ul>
+			
+			<div class="cnum ycode">短信验证码<span class="btn-ycode">获取验证码<i class="timer">60s</i></span></div>
+			<p class="tips">由银联在线提供安全支付服务，保证您的资金安全</p>
+			<a href="javascript:;" class="btn-sure btn-sure1">确认支付</a>
+			<a href="javascript:;" class="btn-sure btn-newcard">使用新卡支付</a>
+		</section>
+		
+		<section class="prompt-wrap">
+			<div class="prompt-cont">
+				<p class="prompt-title">是否要删除该银行卡？<br />删除后，您在支付时将无法直接选择该卡进行支付了哦~</p>
+				<a href="javascript:;" class="btn-change btn-changeway">保留银行卡</a>
+				<a href="javascript:;" class="btn-change btn-changecard">仍要删除</a>				
+			</div>	
+		</section>		
+		
+	<script src="./js/jquery-2.2.0.min.js"></script>
+	<script type="text/javascript">
+		$(".btn-ycode").click(function() {
+			$(".timer").text("60s");
+			$(this).addClass("unabled");
+			$(".timer").show();
+			var flag = 60;
+			var timer = setInterval(function() {
+				if(flag == 0) {
+					clearInterval(timer);
+					$(".btn-ycode").removeClass("unabled");
+					$(".timer").hide();
+				}
+				flag--;
+				$(".timer").text(flag + "s");
+			}, 1000);
+		});
+		
+		$(".timer").click(function(e) {
+			e.stopPropagation();
+		});
+		
+		var selectBody = $(".select-body"),
+			optionItem = $(".select-body li"),
+			delItem = $(".icon-del");
+			
+		setDefaul();	
+		
+		/**
+		 * 默认显示列表中的第一条
+		 */
+		function setDefaul() {
+			var optionItemLen = $(".select-body li").length;
+			if (optionItemLen) {
+				$(".cnum-txt").text($(".select-body li:first-child .select-value").text());
+			}			
+		}
+			
+		$(".icon-more").click(function () {
+			if ($(selectBody).is(":visible")) {
+				$(selectBody).hide();
+			}else {
+				$(selectBody).show();
+			}
+		});
+		
+		for (var i = 0; i < optionItem.length; i++) {
+			$(optionItem[i]).click(function () {
+				$(".cnum-txt").text($(this).find(".select-value").text());
+				$(selectBody).hide();
+			});
+			
+			$(delItem[i]).click(function (e) {
+				e.stopPropagation();
+				
+				$(".prompt-wrap").show();
+				$(".btn-changecard").attr("data-flag", $(this).parents("li").index());
+			});
+		}
+		
+		//弹框按钮事件
+		$(".btn-changeway").click(function () {
+			$(".prompt-wrap").hide();
+		});
+		
+		//添加2s弹框
+		function addHtm() {
+			var htm = '<section class="prompt-tips">该银行卡已删除</section>';
+			$("body").append(htm);			
+		}
+		
+		//设置不可用
+		function setUnable() {
+			$(".cnum p").css("background", "none");
+			$(".btn-ycode").unbind();
+			$(".cnum-txt")
+				.text("无可用银行卡，请输入新卡")
+				.css({
+					"color" : "#8b8b8b",
+					"font-size" : ".31rem"					
+				});
+			$(".btn-ycode").css("background", "#bbb");	
+			$(".timer").hide();
+			$(".btn-sure1").css("background", "#bbb");				
+		}
+		
+		$(".btn-changecard").click(function () {
+			$(".select-body li").eq($(this).attr("data-flag")).remove();
+			$(".prompt-wrap").hide();
+			
+			if (!($(".select-body li").length)) {
+				setUnable();
+				addHtm();
+				
+				//2s后弹框消失
+				var timer = setTimeout(function () {
+					$(".prompt-tips").hide();
+				}, 2000);
+			}
+		});
+	</script>
+	</body>
+
+</html>
