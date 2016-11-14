@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+   <style>
+    	.test-div {
+    		position: relative;
+    		width: 200px;height: 100px;	
+    		border-radius: 5px;
+    		background-color: #e4dede;
+    		overflow: hidden;
+    	}
+    	.test-div:before {
+    		content: '';
+    		display: block;
+    		position: absolute;
+    		width: 100%;
+    		height: 10px;
+    		background-color: blue;
+    		border-top-left-radius: 5px;
+    		border-top-right-radius: 5px;
+    		top: 0;
+    		left: 0;
+    		transform: translate(-100%);
+    		transition: transform .2s ease-out;
+    	}
+    	.test-div:hover {
+    		cursor: pointer;
+    	}
+    	.test-div:hover:before {
+    		transform: translate(0%);
+    	}
+    </style>
+</head>
+<body>
+
+  <div class="test-div"></div>
+</body>
+<script>	
+	var module = new Object({
+
+	});
+</script>
+</html>
